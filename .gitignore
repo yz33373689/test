@@ -1,0 +1,9 @@
+*.suo
+/code/work/objs
+/code/work/bin
+Debug
+/code/work/ipch
+*.opensdf
+/code/work/msg/*.user
+*.sdf
+*.aps
