@@ -20,3 +20,14 @@ Cmsg::Cmsg()
 {
 	return;
 }
+CMsgService* CMsgService::instance()
+{
+  static CMsgService _instance;
+  return &_instance;
+}
+MSG_API char* msg_alloc_buffer(int size)
+{
+  if (0 >= size)
+    size = 1;
+  return new char[size];
+}

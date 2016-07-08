@@ -20,3 +20,5 @@ public:
 extern USERMGR_API int nusermgr;
 
 USERMGR_API int fnusermgr(void);
+USERMGR_API void test_msg_singleton();
+USERMGR_API void user_free_buffer(char* buf);

@@ -17,6 +17,17 @@ public:
 	// TODO: add your methods here.
 };
 
+class MSG_API CMsgService{
+public:
+  static CMsgService* instance();
+public:
+  CMsgService(){
+    m_count = 0;
+  }
+public:
+  int m_count;
+};
 extern MSG_API int nmsg;
 
 MSG_API int fnmsg(void);
+MSG_API char* msg_alloc_buffer(int size);

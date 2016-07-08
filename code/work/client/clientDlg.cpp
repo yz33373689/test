@@ -168,4 +168,16 @@ void CclientDlg::OnBnClickedButtonTest()
   usrmgrStr.Format(L"%d", usrmgrInt);
   GetDlgItem(IDC_EDIT_USERMGR)->SetWindowTextW(usrmgrStr);
 
+  CMsgService* svr1 = CMsgService::instance();
+  ++svr1->m_count;
+
+  test_msg_singleton();
+  int i = 0;
+
+  char* buf = msg_alloc_buffer(65535 * 10);
+  memset(buf, 0, 65535 * 10);
+  delete[]buf;
+  buf = msg_alloc_buffer(65535 * 10);
+  memset(buf, 0, 65535 * 10);
+  user_free_buffer(buf);
 }
